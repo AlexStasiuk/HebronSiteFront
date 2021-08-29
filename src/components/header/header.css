@@ -4,8 +4,16 @@
 }
 .header-items{
     height: 50px;
+    cursor: pointer;
 }
 .logo{
     width: 20%;
     height: 50px;
+}
+.support-button-in-header{
+    height: 60%;
+    border-width: 5px;
+    border-color: orangered;
+    border-bottom-color: orangered;
+    box-shadow: none;
 }

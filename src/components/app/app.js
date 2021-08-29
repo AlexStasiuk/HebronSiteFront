@@ -10,10 +10,48 @@ export default class App extends React.Component{
 
     state={
         current_page: <Main />, // main, news, education
-        all_pages: ['Про нас', 'Навчання', 'Новини','Хеврон100','Приєднатись','Отримайте взамін від Хеврону',],
-        current_language: 'ukr' //ukr, eng
+        all_pages: [
+            'Про нас', 
+            'Навчання',
+            'Новини',
+            'Хеврон100',
+            'Приєднатись',
+            'Отримайте взамін від Хеврону'
+        ],
+        all_pages_ukr: [
+            'Про нас', 
+            'Навчання',
+            'Новини',
+            'Хеврон100',
+            'Приєднатись',
+            'Отримайте взамін від Хеврону'
+        ],
+        all_pages_eng:[
+            'About',
+            'Training',
+            'Blog',
+            'Hebron100',
+            'Get involved',
+            'Get in return from Hebron'
+        ],
+        current_language: 'укр' //ukr, eng
     }
 
+    onLanguageSwitcherClicked = (newLanguage) =>{
+        console.log(newLanguage);
+        if(newLanguage === "eng"){
+            this.setState({
+                current_language: "eng",
+                all_pages: this.state.all_pages_eng
+            })
+        }
+        else if(newLanguage === "укр"){
+            this.setState({
+                current_language: "укр",
+                all_pages: this.state.all_pages_ukr
+            })
+        }
+    }
     getContent = (content)=>{
         let mas = [];
         for(let i = 0; i < 100;i++){
@@ -56,7 +94,9 @@ export default class App extends React.Component{
             <Header
             className="container"
             onClickNumberHappen= {this.onHeaderClicked}
+            onClickLanguageSwitcher = {this.onLanguageSwitcherClicked}
             pages={this.state.all_pages}
+            language={this.state.current_language}
             />
             <ul>
             {this.getContent(content)}
