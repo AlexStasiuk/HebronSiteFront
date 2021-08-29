@@ -10,7 +10,8 @@ export default class App extends React.Component{
 
     state={
         current_page: <Main />, // main, news, education
-        all_pages: ['Про нас', 'Навчання', 'Новини','Хеврон100','Приєднатись','Отримайте взамін від Хеврону',]
+        all_pages: ['Про нас', 'Навчання', 'Новини','Хеврон100','Приєднатись','Отримайте взамін від Хеврону',],
+        current_language: 'ukr' //ukr, eng
     }
 
     getContent = (content)=>{
@@ -26,7 +27,7 @@ export default class App extends React.Component{
     }
     onHeaderClicked = (item) =>{
         switch(item){
-            case 'main':
+            case 'logo':
                 console.log('Switched to main page');
                 this.setState({
                     current_page: <Main />
@@ -53,6 +54,7 @@ export default class App extends React.Component{
         return (
         <div>
             <Header
+            className="container"
             onClickNumberHappen= {this.onHeaderClicked}
             pages={this.state.all_pages}
             />
