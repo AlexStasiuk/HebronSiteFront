@@ -22,8 +22,8 @@ export default class Header extends React.Component{
         );
     }
     render(){
-        const classNames = "header-block sticky-top border-bottom ";
-        const ulStyle = "d-flex justify-content-between flex-row flex-wrap container align-items-center";
+        const classNames = "header-block sticky-top border-bottom bg-white";
+        const ulStyle = "d-flex justify-content-between flex-row  container align-items-center w-100";
         return (
             <div className={classNames}>
                 

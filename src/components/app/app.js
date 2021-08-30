@@ -52,17 +52,7 @@ export default class App extends React.Component{
             })
         }
     }
-    getContent = (content)=>{
-        let mas = [];
-        for(let i = 0; i < 100;i++){
-            mas.push(i);
-        }
-        return mas.map((item,index) => {
-            return(
-                <li
-                key={index+1}>{item}{content}</li>);
-        })
-    }
+
     onHeaderClicked = (item) =>{
         switch(item){
             case 'logo':
@@ -92,14 +82,14 @@ export default class App extends React.Component{
         return (
         <div>
             <Header
-            className="container"
+            className="container bg"
             onClickNumberHappen= {this.onHeaderClicked}
             onClickLanguageSwitcher = {this.onLanguageSwitcherClicked}
             pages={this.state.all_pages}
             language={this.state.current_language}
             />
             <ul>
-            {this.getContent(content)}
+            {content}
             </ul>
         </div>);
     }

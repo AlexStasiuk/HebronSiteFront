@@ -1,0 +1,21 @@
+.hebron-top-img{
+    width: 100%;
+    position: relative;
+}
+.first-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    background-color: orangered;
+}
+.image-div{
+    height: 100%;
+    width: 80%;
+    background-color: orchid;
+}
+.text-on-image{
+	position: absolute;
+	top: 200px;
+	left: 20px;
+}

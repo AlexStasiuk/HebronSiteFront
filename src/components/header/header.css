@@ -12,8 +12,9 @@
 }
 .support-button-in-header{
     height: 60%;
-    border-width: 5px;
+    border-width: 2px;
     border-color: orangered;
-    border-bottom-color: orangered;
+    border-right-style: solid;
+    border-bottom-style: solid;
     box-shadow: none;
 }
